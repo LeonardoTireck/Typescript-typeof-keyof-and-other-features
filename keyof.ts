@@ -25,7 +25,7 @@ function getProp<T extends object, T2 extends keyof T>(obj: T, key: T2) {
   return value;
 }
 
-const user = { name: "Leo", age: 27 };
+const user: User = { name: "Leo", age: 27 };
 
 const val = getProp(user, "age"); // : number
 
@@ -42,5 +42,5 @@ const dataObject = {
   },
 };
 
-const dataObjectRandomValue = getProp(dataObject, "consumers").length;
-console.log(dataObjectRandomValue);
+const dataObjectRandomValue = +getProp(dataObject, "consumers")[1];
+console.log(dataObjectRandomValue, val);
