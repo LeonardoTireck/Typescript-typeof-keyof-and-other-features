@@ -10,3 +10,4 @@ type AppUser = {
 
 // indexed access types are useful for extracting parts of a type into a new type
 type Perms = AppUser["permissions"];
+type Perm = Perms[number];
