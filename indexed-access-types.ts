@@ -10,4 +10,7 @@ type AppUser = {
 
 // indexed access types are useful for extracting parts of a type into a new type
 type Perms = AppUser["permissions"];
-type Perm = Perms[number];
+type Perm = Perms[number]; // this tells TS you want to extract the type from the elements on a specific position of the array
+// the same applies to the following:
+type Names = string[];
+type Name = Names[number];
