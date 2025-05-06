@@ -16,9 +16,9 @@ let mathOperations: Operations = {
   },
 };
 
-let exampleOperations: Results<Operations> = {
+let mathResults: Results<Operations> = {
   add: mathOperations.add(1, 3),
   subtract: mathOperations.subtract(1, 3),
 };
 
-console.log(exampleOperations);
+console.log(mathResults);
