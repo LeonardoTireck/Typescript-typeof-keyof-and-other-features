@@ -24,6 +24,9 @@ type DataFileEvents = {
 
 // now we can create a function that takes a DataFileEvents type and calls the method for each property of the DataFile type with the "Changed" suffix.
 function triggerDataFileEvents(events: DataFileEvents) {
-  events.dataChanged();
-  events.permissionsChanged();
+  let newData = events.dataChanged();
+  let newPermissions = events.permissionsChanged();
+
+  return { newData, newPermissions };
 }
+// this will return void because the methods in the DataFileEvents type return void.
