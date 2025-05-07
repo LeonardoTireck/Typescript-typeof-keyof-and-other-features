@@ -21,3 +21,9 @@ type DataFileEventNames = `${keyof DataFile}Changed`;
 type DataFileEvents = {
   [Key in DataFileEventNames]: () => void;
 };
+
+// now we can create a function that takes a DataFileEvents type and calls the method for each property of the DataFile type with the "Changed" suffix.
+function triggerDataFileEvents(events: DataFileEvents) {
+  events.dataChanged();
+  events.permissionsChanged();
+}
